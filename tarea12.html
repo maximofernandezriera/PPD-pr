@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1.2 - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 1.2</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                    Solución tarea 1.2
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-webm-titulo">
+            <h2 id="video-webm-titulo" class="text-xl font-bold text-uoc-blue mb-4">Vídeo en formato WebM (VP9)</h2>
+            <p class="mb-4">
+                Este formato utiliza el códec VP9, que ofrece una excelente compresión manteniendo una buena calidad visual. Es compatible con la mayoría de navegadores modernos como Chrome, Firefox y Edge.
+            </p>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <video controls class="w-full rounded-lg shadow-lg" aria-label="Vídeo en formato WebM con códec VP9">
+                    <source src="mfernandez_vp9.webm" type="video/webm">
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-fullhd-titulo">
+            <h2 id="video-fullhd-titulo" class="text-xl font-bold text-uoc-blue mb-4">Vídeo en formato MOV (Full HD)</h2>
+            <p class="mb-4">
+                Este formato utiliza el códec H.264, ampliamente compatible con dispositivos Apple y ofrece una calidad Full HD (1920x1080). Es ideal para visualización en pantallas grandes.
+            </p>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <video controls class="w-full rounded-lg shadow-lg" aria-label="Vídeo en formato MOV con resolución Full HD (1920x1080)">
+                    <source src="mfernandez_original-fullhd.mov" type="video/quicktime">
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-hd-titulo">
+            <h2 id="video-hd-titulo" class="text-xl font-bold text-uoc-blue mb-4">Vídeo en formato MOV (HD)</h2>
+            <p class="mb-4">
+                Versión HD (1280x720) del vídeo, optimizada para dispositivos con pantallas de tamaño medio y conexiones de velocidad moderada.
+            </p>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <video controls class="w-full rounded-lg shadow-lg" aria-label="Vídeo en formato MOV con resolución HD (1280x720)">
+                    <source src="mfernandez_original-hd.mov" type="video/quicktime">
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-480-titulo">
+            <h2 id="video-480-titulo" class="text-xl font-bold text-uoc-blue mb-4">Vídeo en formato MOV (480p)</h2>
+            <p class="mb-4">
+                Versión de menor resolución (480p), ideal para dispositivos móviles o conexiones lentas, manteniendo una calidad aceptable con un tamaño de archivo reducido.
+            </p>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <video controls class="w-full rounded-lg shadow-lg" aria-label="Vídeo en formato MOV con resolución 480p">
+                    <source src="mfernandez_480.mov" type="video/quicktime">
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-multiple-titulo">
+            <h2 id="video-multiple-titulo" class="text-xl font-bold text-uoc-blue mb-4">Ejemplo de implementación con múltiples fuentes</h2>
+            <p class="mb-4">
+                A continuación se muestra un ejemplo de implementación que combina todos los formatos disponibles, permitiendo al navegador seleccionar automáticamente la mejor opción según el dispositivo y sus capacidades.
+            </p>
+            <div class="bg-gray-100 p-4 rounded-lg">
+                <video controls class="w-full rounded-lg shadow-lg" aria-label="Vídeo con múltiples fuentes para máxima compatibilidad">
+                    <source src="mfernandez_vp9.webm" type="video/webm">
+                    <source src="mfernandez_original-fullhd.mov" type="video/quicktime">
+                    <source src="mfernandez_original-hd.mov" type="video/quicktime" media="(max-width: 1280px)">
+                    <source src="mfernandez_480.mov" type="video/quicktime" media="(max-width: 480px)">
+                    Tu navegador no soporta la etiqueta de video HTML5.
+                </video>
+            </div>
+            <div class="mt-4 bg-gray-100 p-4 rounded-lg">
+                <p class="text-sm font-mono">
+                    &lt;video controls&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="mfernandez_vp9.webm" type="video/webm"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="mfernandez_original-fullhd.mov" type="video/quicktime"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="mfernandez_original-hd.mov" type="video/quicktime" media="(max-width: 1280px)"&gt;<br>
+                    &nbsp;&nbsp;&lt;source src="mfernandez_480.mov" type="video/quicktime" media="(max-width: 480px)"&gt;<br>
+                    &nbsp;&nbsp;Tu navegador no soporta la etiqueta de video HTML5.<br>
+                    &lt;/video&gt;
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6" aria-labelledby="caracteristicas-titulo">
+            <h2 id="caracteristicas-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Características del formato HTML5 en publicación y visualización de vídeo</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                    El formato HTML5 ha traído numerosas mejoras para la visualización y publicación de material audiovisual, destacando las siguientes:
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Compatibilidad nativa con vídeo</h3>
+                <p class="mb-4">
+                    Con HTML5 no se requieren reproductores externos para la visualización de vídeo, como ocurría anteriormente con plugins como Flash o Silverlight. La etiqueta <code>&lt;video&gt;</code> permite reproducir contenido multimedia directamente desde el navegador de forma nativa.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Accesibilidad mejorada</h3>
+                <p class="mb-4">
+                    HTML5 permite añadir subtítulos, descripciones y metadatos al vídeo mediante la etiqueta <code>&lt;track&gt;</code>, facilitando la accesibilidad para personas con discapacidades auditivas o visuales, y mejorando la experiencia general de todos los usuarios.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Adaptabilidad a diferentes dispositivos</h3>
+                <p class="mb-4">
+                    Permite ofrecer distintas versiones de tamaño y calidad para adaptarse a los diferentes dispositivos o según la conexión de red, gracias al atributo <code>media</code> en las etiquetas <code>&lt;source&gt;</code>. Esto logra mayor compatibilidad, menor carga de red y en general una mejor experiencia de visualización.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Soporte para múltiples formatos</h3>
+                <p class="mb-4">
+                    HTML5 permite especificar múltiples fuentes de vídeo en diferentes formatos (WebM, MP4, Ogg), permitiendo que el navegador elija automáticamente el formato que mejor soporte, aumentando así la compatibilidad entre diferentes navegadores y dispositivos.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Personalización y control</h3>
+                <p class="mb-4">
+                    Ofrece numerosas opciones de control como volumen, reproducción, pausa, pantalla completa, etc., a través del atributo <code>controls</code>. Además, puede personalizarse con CSS y JavaScript para lograr una mayor adaptación a la estética del sitio web.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Integración con otros elementos</h3>
+                <p class="mb-4">
+                    Con HTML5 se puede integrar el vídeo con otros elementos del lenguaje como enlaces, imágenes y estilos, permitiendo una experiencia más rica e interactiva para el usuario.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Estandarización abierta</h3>
+                <p class="mb-4">
+                    Al ser un estándar abierto desarrollado por una amplia comunidad y con aceptación prácticamente universal, no depende de empresas concretas ni de tecnologías propietarias, lo que garantiza su continuidad y evolución en el tiempo.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Rendimiento optimizado</h3>
+                <p class="mb-4">
+                    La reproducción de vídeo en HTML5 generalmente consume menos recursos del sistema que las soluciones basadas en plugins, lo que se traduce en un mejor rendimiento, especialmente en dispositivos móviles con recursos limitados.
+                </p>
+                
+                <h3 class="text-lg font-bold text-uoc-blue mt-6 mb-2">Capacidades de streaming adaptativo</h3>
+                <p class="mb-4">
+                    Cuando se combina con tecnologías como HLS (HTTP Live Streaming) o DASH, HTML5 permite implementar streaming adaptativo, ajustando dinámicamente la calidad del vídeo según las condiciones de la red.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Tarea 1.2 - Práctica de Plataformas de publicación y distribución</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
