@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Vídeo - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-exp-titulo">
+            <h2 id="video-exp-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Ejercicio 1: Clip de vídeo incrustado en HTML 5. Tarea 1.1.</h2>
+            <div class="prose max-w-none">
+                <p>
+                    He grabado un vídeo de 20 segundos, tal como se requiere en el enunciado. El vídeo comienza con elementos estáticos y luego incorpora movimiento.
+                </p>
+                <p>
+                    <strong>A continuación, se detallan los datos del vídeo original:</strong>
+                </p>
+                <ul>
+                    <li><strong>Formato:</strong> MPEG-4</li>
+                    <li><strong>Formato del perfil:</strong> QuickTime</li>
+                    <li><strong>Tamaño de archivo:</strong> 58,0 MiB</li>
+                    <li><strong>Duración:</strong> 21 s 78 ms</li>
+                    <li><strong>Velocidad de fotogramas:</strong> 59,940 FPS</li>
+                    <li><strong>Librería de codificación:</strong> Apple QuickTime</li>
+                </ul>
+                <p>
+                    <strong>En la pestaña VÍDEO destacan los siguientes datos:</strong>
+                </p>
+                <p>
+                    Para asegurar la máxima compatibilidad y reproducción en la mayoría de los navegadores actuales, se seleccionará el formato MP4 como contenedor y los códecs H.264 y AAC. Se descartan otros contenedores como Matroska y códecs como H.265 debido a su menor soporte.
+                    En cuanto a la resolución, se utilizarán las más habituales. Y sabiendo que, las resoluciones más comunes son:
+                </p>
+                <ul>
+                    <li>4K: 3840 x 2160</li>
+                    <li>2K: 2560 x 1440</li>
+                    <li>Full HD: 1920 x 1080</li>
+                    <li>HD: 1280 x 720</li>
+                    <li>Definición estándar 480p: 854 x 480</li>
+                    <li>Definición estándar 360p: 640 x 360</li>
+                    <li>Definición estándar 240p: 426 x 240</li>
+                </ul>
+                <p>
+                    Se eligió la resolución Full HD debido a su amplia compatibilidad con ordenadores y dispositivos móviles actuales. Se descartaron resoluciones superiores (4K, 2K) por su potencial tamaño excesivo y las inferiores (360p, 240p) por la pérdida de calidad que implicarían en los dispositivos y conexiones de hoy en día.
+                </p>
+                <p>
+                    El vídeo original, grabado con un móvil y que ya cumplía con los requisitos técnicos (contenedor, códecs y resolución), fue recodificado con Avidemux utilizando los mismos parámetros de la PEC 2 para H.264 (constant rate factor). Esta acción permitió reducir su tamaño a la mitad.
+                </p>
+                <p>
+                    Además del formato principal Full HD, se proporcionarán versiones alternativas de los vídeos mediante la etiqueta <code>&lt;video&gt;</code> de HTML5. Estas versiones incluirán el formato WebM (con códecs VP9 y Opus, impulsado por Google y optimizado para Chrome) y resoluciones adicionales en formato MP4: HD (formato común) y definición estándar 480p (para dispositivos de menor rendimiento o conexiones lentas).
+                </p>
+                <p>
+                    <strong>Los archivos de vídeo resultantes tienen los siguientes tamaños:</strong>
+                </p>
+                <ul>
+                    <li>mfernandez_original.mov: 57.5 MB</li>
+                    <li>mfernandez_fullhd.mp4 (formato principal): 21.158 Kb</li>
+                    <li>mfernandez_hd.mp4: 9.062 Kb</li>
+                    <li>mfernandez_480.mp4: 4.434 Kb</li>
+                    <li>fmartinez59_vp9.webm: 32.253 Kb</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Práctica de Plataformas de publicación y distribución</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
