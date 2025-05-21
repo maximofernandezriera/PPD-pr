@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1.4 - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Vídeo incrustado con poster -->
+        <video controls poster="portadatarea14.jpg" class="w-full rounded-lg shadow-lg" aria-label="Vídeo con múltiples fuentes para máxima compatibilidad y póster">
+                <source src="mfernandez_vp9.webm" type="video/webm">
+                 <source src="mfernandez_original-fullhd.mov" type="video/quicktime">
+                <source src="mfernandez_original-hd.mov" type="video/quicktime" media="(max-width: 1280px)">
+                <source src="mfernandez_480.mov" type="video/quicktime" media="(max-width: 480px)">
+                Tu navegador no soporta la etiqueta de video HTML5.
+        </video>
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Práctica de Plataformas de publicación y distribución</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
