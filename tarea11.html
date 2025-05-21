@@ -20,8 +20,9 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <script src="https://unpkg.com/heroicons@2.0.16/dist/24/outline/heroicons.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -29,29 +30,41 @@
             max-width: 100%;
             height: auto;
         }
+        /* Sutil animación */
+        .fade-in {
+            animation: fadeIn 1.2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
     </style>
 </head>
 <body class="bg-gray-50">
-    <header class="bg-white shadow-md">
+    <header class="bg-gradient-to-r from-uoc-blue via-uoc-purple to-uoc-light-blue shadow-lg">
         <div class="container mx-auto px-4 py-6">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="w-full md:w-1/4 mb-4 md:mb-0">
-                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0 flex justify-center md:justify-start">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24 drop-shadow-lg">
                 </div>
-                <div class="w-full md:w-3/4 text-uoc-blue">
-                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
-                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
-                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
-                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                <div class="w-full md:w-3/4 text-white">
+                    <h1 class="text-3xl font-extrabold mb-2 tracking-wide drop-shadow-lg">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <div class="flex flex-col sm:flex-row sm:space-x-8">
+                        <p class="mb-1 flex items-center"><svg class="w-5 h-5 text-uoc-yellow mr-2" fill="none"><use href="#user"/></svg><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                        <p class="mb-1 flex items-center"><svg class="w-5 h-5 text-uoc-yellow mr-2" fill="none"><use href="#academic-cap"/></svg><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    </div>
+                    <p class="mt-1 flex items-center"><svg class="w-5 h-5 text-uoc-yellow mr-2" fill="none"><use href="#calendar"/></svg>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-
-        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-exp-titulo">
-            <h2 id="video-exp-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Ejercicio 1: Clip de vídeo incrustado en HTML 5. Tarea 1.1.</h2>
+    <main class="container mx-auto px-4 py-8 fade-in">
+        <section class="bg-white rounded-2xl border-l-8 border-uoc-blue shadow-xl hover:shadow-2xl transition-shadow p-8 mb-10">
+            <h2 id="video-exp-titulo" class="text-2xl md:text-3xl font-bold text-uoc-blue mb-4 flex items-center">
+                <svg class="w-8 h-8 mr-2 text-uoc-orange" fill="none"><use href="#film"/></svg>
+                Ejercicio 1: Clip de vídeo incrustado en HTML 5. Tarea 1.1.
+            </h2>
             <div class="prose max-w-none">
                 <p>
                     He grabado un vídeo de 20 segundos, tal como se requiere en el enunciado. El vídeo comienza con elementos estáticos y luego incorpora movimiento.
@@ -59,7 +72,7 @@
                 <p>
                     <strong>A continuación, se detallan los datos del vídeo original:</strong>
                 </p>
-                <ul>
+                <ul class="list-disc list-inside pl-2 space-y-1">
                     <li><strong>Formato:</strong> MPEG-4</li>
                     <li><strong>Formato del perfil:</strong> QuickTime</li>
                     <li><strong>Tamaño de archivo:</strong> 58,0 MiB</li>
@@ -67,35 +80,32 @@
                     <li><strong>Velocidad de fotogramas:</strong> 59,940 FPS</li>
                     <li><strong>Librería de codificación:</strong> Apple QuickTime</li>
                 </ul>
+                <p class="mt-4"><strong>En la pestaña VÍDEO destacan los siguientes datos:</strong></p>
                 <p>
-                    <strong>En la pestaña VÍDEO destacan los siguientes datos:</strong>
+                    Para asegurar la máxima compatibilidad y reproducción en la mayoría de los navegadores actuales, se seleccionará el formato MP4 como contenedor y los códecs H.264 y AAC. Se emplearán resoluciones habituales:
                 </p>
-                <p>
-                    Para asegurar la máxima compatibilidad y reproducción en la mayoría de los navegadores actuales, se seleccionará el formato MP4 como contenedor y los códecs H.264 y AAC. Se descartan otros contenedores como Matroska y códecs como H.265 debido a su menor soporte.
-                    En cuanto a la resolución, se utilizarán las más habituales. Y sabiendo que, las resoluciones más comunes son:
-                </p>
-                <ul>
+                <ul class="grid grid-cols-2 md:grid-cols-3 gap-1 mt-2 text-uoc-blue font-semibold">
                     <li>4K: 3840 x 2160</li>
                     <li>2K: 2560 x 1440</li>
                     <li>Full HD: 1920 x 1080</li>
                     <li>HD: 1280 x 720</li>
-                    <li>Definición estándar 480p: 854 x 480</li>
-                    <li>Definición estándar 360p: 640 x 360</li>
-                    <li>Definición estándar 240p: 426 x 240</li>
+                    <li>480p: 854 x 480</li>
+                    <li>360p: 640 x 360</li>
+                    <li>240p: 426 x 240</li>
                 </ul>
-                <p>
-                    Se eligió la resolución Full HD debido a su amplia compatibilidad con ordenadores y dispositivos móviles actuales. Se descartaron resoluciones superiores (4K, 2K) por su potencial tamaño excesivo y las inferiores (360p, 240p) por la pérdida de calidad que implicarían en los dispositivos y conexiones de hoy en día.
+                <p class="mt-4">
+                    Se eligió la resolución Full HD por su amplia compatibilidad. Se descartaron resoluciones superiores (4K, 2K) por su tamaño y requisitos técnicos.
                 </p>
                 <p>
-                    El vídeo original, grabado con un móvil y que ya cumplía con los requisitos técnicos (contenedor, códecs y resolución), fue recodificado con Avidemux utilizando los mismos parámetros de la PEC 2 para H.264 (constant rate factor). Esta acción permitió reducir su tamaño a la mitad.
+                    El vídeo original, grabado con un móvil y que ya cumplía con los requisitos técnicos (contenedor, códecs y resolución), fue recodificado con Avidemux utilizando los mismos parámetros.
                 </p>
                 <p>
-                    Además del formato principal Full HD, se proporcionarán versiones alternativas de los vídeos mediante la etiqueta <code>&lt;video&gt;</code> de HTML5. Estas versiones incluirán el formato WebM (con códecs VP9 y Opus, impulsado por Google y optimizado para Chrome) y resoluciones adicionales en formato MP4: HD (formato común) y definición estándar 480p (para dispositivos de menor rendimiento o conexiones lentas).
+                    Además del formato principal Full HD, se proporcionarán versiones alternativas de los vídeos mediante la etiqueta <code>&lt;video&gt;</code> de HTML5.
                 </p>
                 <p>
                     <strong>Los archivos de vídeo resultantes tienen los siguientes tamaños:</strong>
                 </p>
-                <ul>
+                <ul class="list-disc list-inside pl-2 space-y-1">
                     <li>mfernandez_original.mov: 57.5 MB</li>
                     <li>mfernandez_fullhd.mp4 (formato principal): 21.158 Kb</li>
                     <li>mfernandez_hd.mp4: 9.062 Kb</li>
@@ -104,13 +114,13 @@
                 </ul>
             </div>
         </section>
-
     </main>
 
-    <footer class="bg-uoc-blue text-white py-6 mt-8">
+    <footer class="bg-gradient-to-r from-uoc-blue via-uoc-purple to-uoc-light-blue text-white py-8 mt-8 shadow-inner">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
+                <div class="mb-4 md:mb-0 flex items-center">
+                    <svg class="w-6 h-6 text-uoc-yellow mr-2" fill="none"><use href="#academic-cap"/></svg>
                     <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
                 </div>
                 <div>
@@ -119,5 +129,12 @@
             </div>
         </div>
     </footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="user" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M15.75 7.5a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/><path stroke="currentColor" stroke-width="1.5" d="M4.5 19.5a7.5 7.5 0 1115 0v.75a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V19.5z"/></symbol>
+        <symbol id="academic-cap" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M12 3L1.5 9l10.5 6 8.25-4.714"/><path stroke="currentColor" stroke-width="1.5" d="M12 21V9"/><path stroke="currentColor" stroke-width="1.5" d="M21 9.75v3.75c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5V9.75"/></symbol>
+        <symbol id="calendar" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="5" stroke="currentColor" stroke-width="1.5" rx="2"/><path stroke="currentColor" stroke-width="1.5" d="M16 2v2M8 2v2m-5 5h18"/></symbol>
+        <symbol id="film" viewBox="0 0 24 24"><rect width="18" height="14" x="3" y="5" stroke="currentColor" stroke-width="1.5" rx="2"/><path stroke="currentColor" stroke-width="1.5" d="M7 2v2m10-2v2M3 9h18"/></symbol>
+    </svg>
 </body>
 </html>
