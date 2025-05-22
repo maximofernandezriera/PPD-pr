@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 1.4 - Práctica de Plataformas de Máximo Fernández Riera</title>
@@ -42,7 +40,7 @@
                     <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
                     <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
                     <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
-                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p> 
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
                 </div>
             </div>
         </div>
@@ -64,16 +62,35 @@
             <p class="mb-4">
                 A continuación, podemos ver un ejemplo de controles con poster, silenciado por defecto y track de subtitulos en español.
             </p>
-        <!-- Vídeo incrustado con poster -->
-        <video controls poster="portadatarea14.jpg" muted class="w-full rounded-lg shadow-lg" aria-label="Vídeo silenciado con poster y subtitles">
-                <source src="mfernandez_vp9.webmpóster">
-                <source src="mfernandez_vp9.webm" type="video/webm">
-                <source src="mfernandez_original-fullhd.mov" type="video/quicktime">
-                <source src="mfernandez_original-hd.mov" type="video/quicktime" media="(max-width: 1280px)">
-                <source src="mfernandez_480.mov" type="video/quicktime" media="(max-width: 480px)">
-                <track default="" src="subtitulostarea14.vtt" kind="subtitles" srclang="es" label="Español">
-                Tu navegador no soporta la etiqueta de video HTML5.
-        </video>
+            <div class="prose max-w-none">
+                <p class="mb-2">
+                    AWS MediaConvert ofrece una serie de servicios adicionales o de "valor añadido" en el ámbito de la publicación y distribución de vídeo, más allá de la mera transcodificación básica. Estos servicios incluyen:
+                </p>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Soporte para una amplia gama de formatos de entrada y salida, incluyendo H.264/AVC, H.265/HEVC, VP8, VP9 y AV1.</li>
+                    <li>Procesamiento Avanzado, como desentrelazado, reducción de ruido y escalado.</li>
+                    <li>Soporte HDR para estándares como HDR10, HDR10+, HLG y Dolby Vision.</li>
+                    <li>Packaging Adaptativo para formatos de streaming como HLS, DASH, CMAF y MSS.</li>
+                    <li>Protección de Contenido mediante la integración de sistemas DRM.</li>
+                    <li>Codificación Acelerada.</li>
+                </ul>
+                <p class="mb-2">
+                    Por su parte, AWS CloudFront se enfoca en la distribución eficiente del contenido procesado, ofreciendo:
+                </p>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Una Red Global de puntos de presencia.</li>
+                    <li>Escalabilidad Automática.</li>
+                    <li>Seguridad Robusta, incluyendo protección contra ataques DDoS y soporte para certificados SSL/TLS.</li>
+                    <li>Integración Fluida con otros servicios de AWS.</li>
+                    <li>Streaming Optimizado con baja latencia.</li>
+                </ul>
+                <p class="mb-2">
+                    La comparación menciona que MediaConvert ofrece más funcionalidades enfocadas en la codificación profesional que Azure Media Services, y que AWS cuenta con más características orientadas a la industria del broadcast profesional que Google Cloud Media Services.
+                </p>
+                <p>
+                    Es importante notar que, si bien los fuentes detallan estas funcionalidades avanzadas de procesamiento, packaging, seguridad y distribución, no mencionan servicios adicionales específicos como el subtitulado automático, la identificación de cambios de plano o la detección de caras en el contexto de los CDNs o servicios de transcodificación analizados.
+                </p>
+            </div>
         </section>
     </main>
 
