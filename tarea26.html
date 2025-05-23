@@ -1,5 +1,4 @@
-
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 1.4 - Práctica de Plataformas de Máximo Fernández Riera</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +19,31 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        /* Added styles from AWSMediaLiveRetransmisinenVivo.html */
+        @import url(https://themes.googleusercontent.com/fonts/css?kit=DFQxm4rd7fRHgM9OTejWVT5Vho6BE7M80rHXEVKqXWegg2XYR88pwOsaJkfiF7cJu5e0vFtnyLdhsxviZUUN-U0KZVwUvSK-LyXz4qcE1hc);
+        table td,table th{padding:0}
+        .c1{border-right-style:solid;padding:6pt 9pt 6pt 9pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#f8fafd;border-left-style:solid;border-bottom-width:1pt;width:117pt;border-top-color:#000000;border-bottom-style:solid}
+        .c2{color:#1b1c1d;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Google Sans Text";font-style:normal}
+        .c22{font-size:16pt;font-family:"Google Sans";font-style:normal;color:#1b1c1d;font-weight:700}
+        .c0{font-size:12pt;font-family:"Google Sans Text";font-style:normal;color:#1b1c1d;font-weight:400}
+        .c3{text-decoration:none;vertical-align:baseline}
+        .c4{font-size:12pt;font-family:"Google Sans Text";color:#1b1c1d;font-weight:400}
+        .c6{font-size:15pt;font-family:"Google Sans";font-style:normal;color:#1b1c1d;font-weight:700}
+        .c10{font-size:10pt;font-family:"Google Sans Text";font-style:normal;color:#1b1c1d;font-weight:400}
+        .c15{font-size:12pt;font-family:"Google Sans";color:#1b1c1d;font-weight:400}
+        .c16{font-family:"Google Sans Text"}
+        .c21{font-size:15pt;font-family:"Google Sans";color:#1b1c1d;font-weight:400}
+        .c24{font-style:normal}
+        .c5{padding-top:6pt;padding-bottom:6pt;line-height:1.149999976158142;text-align:left}
+        .c8{padding-top:0pt;padding-bottom:6pt;line-height:1.149999976158142;text-align:left}
+        .c12{padding-top:0pt;padding-bottom:12pt;line-height:1.149999976158142;text-align:left}
+        .c13{padding-top:12pt;padding-bottom:12pt;line-height:1.149999976158142;text-align:left}
+        .c17{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:left;height:11pt}
+        .c18{padding-top:12pt;padding-bottom:6pt;line-height:1.149999976158142;text-align:left}
+        .c19{height:11pt}
+        .c23{border-spacing:0;border-collapse:collapse;margin-right:auto}
+        .c7{height:0pt}
+        /* End of added styles */
         body {
             font-family: 'Open Sans', sans-serif;
         }
@@ -49,16 +73,19 @@
     <main class="container mx-auto px-4 py-8">
 
         <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
-            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 2.4</h2>
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 2.6</h2>
             <div class="prose max-w-none">
                 <p class="mb-4">
-                Si realizas una pausa en el VLC emisor, ¿cuántos según tarda en pausarse el vídeo al receptor? ¿Por qué? Vuélvelo a poner en reproducción.
+                Enfocándonos en la transmisión en vivo de un stream de vídeo mediante un servicio de cloud CDN, éstos ofrecen múltiples modos de distribución, como por ejemplo streaming de baja latencia por entornos de mínimo retraso, streaming por OTT, etc... ¡incluso interactivo!
+De las múltiples opciones que puedes encontrar, céntrate en una y describe el proceso (máximo dos-tres páginas).
+Si en el proceso se aplican políticas específicas de usuarios o recursos, roles de gestión y administración de servicios, indícalo.
+Y opcionalmente y si el entorno te lo permite, haz un cálculo estimativo de coste por minuto de una transmisión dentro de una misma región de un stream HD en directo por 10.000 usuarios simultáneos.
                 </p>
             </div>
         </section>
 
         <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="info-video-titulo">
-            <h2 id="info-video-titulo" class="text-xl font-bold text-uoc-blue mb-4">Pausa y reproducción del streaming</h2>
+            <h2 id="info-video-titulo" class="text-xl font-bold text-uoc-blue mb-4">AWS Elemental MediaLive para la transmisi&oacute;n de v&iacute;deo en streaming con CDN en la nube</h2>
             <p class="mb-4">
             La detención del reproductor tras pausar se demora de 1 a 2 segundos, influenciada por la latencia de red (tipo, ancho de banda, saturación, distancia, calidad, protocolo RTP), el buffer del VLC en el receptor y la capacidad de procesamiento.
             </p>
@@ -66,6 +93,62 @@
             La reanudación experimenta una demora mayor, de 2 a 3 segundos, con cortes y desincronización iniciales que requieren entre 7 y 9 segundos adicionales para una reproducción fluida. Este retraso se atribuye a los factores previamente mencionados, sumados a la necesidad de resincronizar los relojes del emisor y receptor (RTP) y rellenar los buffers. Si bien la latencia de red es mínima al operar en la misma máquina, la latencia inherente al protocolo RTP es perceptible.
             </p>
         
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="aws-medialive-content-titulo">
+            <p class="c12"><span class="c4">AWS Elemental MediaLive es un servicio en la nube para procesar v&iacute;deo en vivo de calidad broadcast, permitiendo la entrega a televisiones y dispositivos conectados.</span><span class="c4">&nbsp;</span><span class="c4">Ingresa v&iacute;deo en vivo, lo transcodifica en tiempo real a m&uacute;ltiples formatos y tasas para ABR, y lo prepara para una distribuci&oacute;n eficiente.</span><span class="c0 c3">&nbsp;</span></p>
+            <p class="c12"><span class="c4">Dentro de AWS Media Services, se integra con MediaConnect (transporte seguro), MediaPackage (paquetizaci&oacute;n y originaci&oacute;n con DRM y time-shifting), MediaStore (almacenamiento optimizado) y CloudFront (CDN). MediaLive Anywhere ofrece despliegue local para flujos h&iacute;bridos, facilitando la transici&oacute;n de broadcasters a la nube.</span></p>
+            <p class="c12"><span class="c6">Caracter&iacute;sticas Clave y Beneficios (CDN)</span></p>
+            <h2 class="c18" id="h.tgmivxq7pzgr"><span class="c15">AWS Elemental MediaLive ofrece producci&oacute;n de v&iacute;deo en vivo de alta calidad con c&oacute;decs est&aacute;ndar (H.264/AVC, H.265/HEVC), funcionalidades broadcast (inserci&oacute;n de anuncios SCTE-35, subt&iacute;tulos, audio m&uacute;ltiple, correcci&oacute;n de sonoridad), alta disponibilidad (multi-AZ), Statmux para optimizar ancho de banda, escalabilidad din&aacute;mica y precios de pago por uso.</span><span class="c15 c3 c24">&nbsp;</span></h2>
+            <h2 class="c18" id="h.jpq4f6vy9po6"><span class="c15">Su integraci&oacute;n con Amazon CloudFront (CDN) proporciona escalabilidad masiva, baja latencia, alcance global, seguridad mejorada (mitigaci&oacute;n DDoS, cifrado, controles de acceso) e integraci&oacute;n optimizada para una entrega eficiente y resiliente de streams en vivo a audiencias globales, incluso ante alta demanda o fallos.</span></h2>
+            <h2 class="c18"><span class="c6 c3">Modos de Distribuci&oacute;n</span></h2>
+            <p class="c12"><span class="c4">AWS Elemental MediaLive genera formatos est&aacute;ndar de la industria (HLS, DASH, MSS, RTMP, RTP/UDP) para streaming ABR, crucial para CDNs. El HLS Output Group, com&uacute;n para dispositivos Apple, usa contenedores M2TS o fMP4 y se env&iacute;a a S3 (para CloudFront u otra CDN) o directamente a servidores HTTP/CDNs.</span><span class="c4">&nbsp;</span><span class="c4">Genera manifiestos M3U8 y segmentos.</span><span class="c0 c3">&nbsp;</span></p>
+            <p class="c12"><span class="c4">El MediaPackage Output Group env&iacute;a un &uacute;nico stream HLS a AWS Elemental MediaPackage, que din&aacute;micamente genera m&uacute;ltiples formatos (HLS, DASH, CMAF, MSS) para los clientes.</span><span class="c4">&nbsp;</span><span class="c4">Simplifica la configuraci&oacute;n de MediaLive y los endpoints de MediaPackage sirven como origen para CDNs. MediaPackage ofrece funcionalidades avanzadas (DRM, DVR, inserci&oacute;n de anuncios sofisticada).</span><span class="c4">&nbsp;</span><span class="c4">CMAF unifica la entrega HLS y DASH con segmentos fMP4 referenciados por manifiestos M3U8 y MPD, mejorando la eficiencia en almacenamiento y cach&eacute; de CDN; MediaPackage es clave para generar salidas CMAF, reduciendo la duplicaci&oacute;n y los costes.</span></p>
+            <h2 class="c8"><span class="c6">Proceso de Transmisi&oacute;n en Vivo con MediaLiv</span><span class="c21">e</span></h2>
+            <p class="c12"><span class="c0 c3">AWS Elemental MediaLive procesa transmisiones en vivo desde la ingesta de se&ntilde;al (varios protocolos soportados con seguridad IP para push) hasta la entrega a espectadores mediante una CDN. Los &quot;Inputs&quot; definen la conexi&oacute;n a la fuente, y los &quot;Channels&quot; realizan el procesamiento (codificaci&oacute;n redundante opcional). Dentro de un canal, los perfiles de codificaci&oacute;n generan m&uacute;ltiples salidas para ABR, y los &quot;Output Groups&quot; empaquetan el contenido (HLS, DASH) y lo env&iacute;an a destinos (S3, MediaPackage, HTTP). </span></p>
+            <p class="c12"><span class="c0 c3">La arquitectura desacoplada permite flexibilidad en el uso de inputs y canales. Tras la codificaci&oacute;n y empaquetado, MediaLive entrega el contenido a la CDN (ej., CloudFront) para su distribuci&oacute;n. El ciclo de vida del canal se gestiona v&iacute;a consola o API, con monitorizaci&oacute;n en CloudWatch. Este sistema abstrae la infraestructura, facilitando la transmisi&oacute;n global y escalable.</span></p>
+            <p class="c12"><span class="c6 c3">Gesti&oacute;n Acceso y Seguridad (IAM)</span></p>
+            <p class="c13"><span class="c0 c3">La seguridad de AWS Elemental MediaLive se basa en IAM, aplicando el principio de menor privilegio para controlar el acceso a los recursos. Un concepto clave es la Entidad de Confianza (rol IAM como MediaLiveAccessRole) que MediaLive asume para interactuar con otros servicios de AWS (S3, MediaPackage, MediaConnect). La pol&iacute;tica de confianza del rol permite a MediaLive asumirlo, y la pol&iacute;tica de permisos define las acciones y recursos permitidos. La correcta configuraci&oacute;n es vital para el acceso a fuentes y destinos.</span></p>
+            <p class="c13"><span class="c0 c3">Las pol&iacute;ticas y permisos se dividen en permisos para usuarios (gesti&oacute;n de recursos MediaLive) y permisos para el rol de entidad de confianza (acciones de MediaLive en otros servicios, incluyendo iam:PassRole para delegar el rol al crear canales).</span></p>
+            <p class="c13"><span class="c0 c3">En seguridad de red, MediaLive usa Input Security Groups para fuentes &quot;push&quot; y permite ingesta/entrega dentro de VPC. El modelo de entidad de confianza y iam:PassRole reflejan la delegaci&oacute;n granular y auditada de permisos, requiriendo permisos expl&iacute;citos para que MediaLive act&uacute;e en nombre del usuario, y para que los usuarios deleguen roles, previniendo la escalada de privilegios.</span></p>
+            <p class="c13 c19"><span class="c0 c3"></span></p>
+            <h2 class="c8"><span class="c6 c3">Estimaci&oacute;n Coste Transmisi&oacute;n HD Vivo (10.000 Usuarios)</span></h2>
+            <p class="c12"><span class="c0">A continuaci&oacute;n, se presenta una estimaci&oacute;n de costes para un evento de transmisi&oacute;n en vivo de 1 hora, con calidad HD 1080p, dirigido a 10,000 espectadores simult&aacute;neos, utilizando AWS Elemental MediaLive para el procesamiento y Amazon S3 como origen para Amazon CloudFront, que se encarga de la distribuci&oacute;n</span><span class="c0 c3">.</span></p>
+            <p class="c12"><span class="c4">&nbsp;Los principales costes de AWS MediaLive son el coste por hora de la entrada HD y de cada salida ABR, el almacenamiento y las solicitudes a Amazon S3 si se usa para las salidas HLS (con CloudFront como origen), y la transferencia de datos saliente y las solicitudes HTTP/HTTPS de Amazon CloudFront, que suele ser el componente de coste m&aacute;s significativo para audiencias masivas.</span></p>
+            <p class="c13"><span class="c0">Bas&aacute;ndose en </span><span class="c4">la documentaci&oacute;n oficial</span><span class="c0">&nbsp;de soluciones de AWS, se puede construir la siguiente tabla de estimaci&oacute;n de costes:</span></p>
+            <table class="c23">
+                <tr class="c7">
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">Componente del Servicio</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">Funci&oacute;n</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">Coste Estimado por Hora (USD)</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">Notas</span></p></td>
+                </tr>
+                <tr class="c7">
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">AWS Elemental MediaLive</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">Entrada HD y Salidas ABR</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">~$3.11</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10">Basado en perfil HD 1080p con 6 rendiciones ABR. Precios de </span><span class="c16">EU</span><span class="c10">&nbsp;</span><span class="c16">West</span><span class="c10">.</span></p></td>
+                </tr>
+                <tr class="c7">
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">Amazon S3</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">Almacenamiento y Solicitudes (origen HLS)</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">~$0.07</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10">Coste bajo para almacenamiento temporal y solicitudes de S3</span><span class="c16">.</span></p></td>
+                </tr>
+                <tr class="c7">
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">Amazon CloudFront</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">Distribuci&oacute;n de Contenido (DTO y Solicitudes)</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10 c3">~$1,531.49</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c10">Componente principal del coste. Asume ~18,017 GB DTO a $0.085/GB (tarifa escalonada inicial).</span></p></td>
+                </tr>
+                <tr class="c7">
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">Total Estimado</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c17"><span class="c2"></span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c5"><span class="c2">~$1,534.67</span></p></td>
+                    <td class="c1" colspan="1" rowspan="1"><p class="c17"><span class="c2"></span></p></td>
+                </tr>
+            </table>
+            <p class="c12 c19"><span class="c0 c3"></span></p>
         </section>
     </main>
 
