@@ -1,0 +1,109 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1.4 - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 1.5</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                  En el ejercicio 5 de la PEC2 valorábamos los servicios de transcodificación de material en función del cliente (móvil, TV gran pantalla, etc).
+Y es que los CDN se están esforzando en enriquecer en servicios de valor añadido tanto en publicación como en distribución.
+Indaga qué servicios adicionales ofrecen los CDN en estos aspectos, te doy algunos ejemplos: subtitulado automático, identificación de cambios de plan, detección de caras, etc.
+                </p>
+            </div>
+        </section>
+
+          <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-fullhd-titulo">
+            <h2 id="video-fullhd-titulo" class="text-xl font-bold text-uoc-blue mb-4">Experimentando con el tag video.</h2>
+            <div class="prose max-w-none">
+                <p class="mb-2">
+                    AWS MediaConvert ofrece una serie de servicios adicionales o de "valor añadido" en el ámbito de la publicación y distribución de vídeo, más allá de la mera transcodificación básica. Estos servicios incluyen:
+                </p>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Soporte para una amplia gama de formatos de entrada y salida, incluyendo H.264/AVC, H.265/HEVC, VP8, VP9 y AV1.</li>
+                    <li>Procesamiento Avanzado, como desentrelazado, reducción de ruido y escalado.</li>
+                    <li>Soporte HDR para estándares como HDR10, HDR10+, HLG y Dolby Vision.</li>
+                    <li>Packaging Adaptativo para formatos de streaming como HLS, DASH, CMAF y MSS.</li>
+                    <li>Protección de Contenido mediante la integración de sistemas DRM.</li>
+                    <li>Codificación Acelerada.</li>
+                </ul>
+                <p class="mb-2">
+                    Por su parte, AWS CloudFront se enfoca en la distribución eficiente del contenido procesado, ofreciendo:
+                </p>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Una Red Global de puntos de presencia.</li>
+                    <li>Escalabilidad Automática.</li>
+                    <li>Seguridad Robusta, incluyendo protección contra ataques DDoS y soporte para certificados SSL/TLS.</li>
+                    <li>Integración Fluida con otros servicios de AWS.</li>
+                    <li>Streaming Optimizado con baja latencia.</li>
+                </ul>
+                <p class="mb-2">
+                    La comparación menciona que MediaConvert ofrece más funcionalidades enfocadas en la codificación profesional que Azure Media Services, y que AWS cuenta con más características orientadas a la industria del broadcast profesional que Google Cloud Media Services.
+                </p>
+                <p>
+                    Es importante notar que, si bien los fuentes detallan estas funcionalidades avanzadas de procesamiento, packaging, seguridad y distribución, no mencionan servicios adicionales específicos como el subtitulado automático, la identificación de cambios de plano o la detección de caras en el contexto de los CDNs o servicios de transcodificación analizados.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Práctica de Plataformas de publicación y distribución</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
