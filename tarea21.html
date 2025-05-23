@@ -49,47 +49,27 @@
     <main class="container mx-auto px-4 py-8">
 
         <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
-            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 1.5</h2>
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 2.1</h2>
             <div class="prose max-w-none">
                 <p class="mb-4">
-                  En el ejercicio 5 de la PEC2 valorábamos los servicios de transcodificación de material en función del cliente (móvil, TV gran pantalla, etc).
-Y es que los CDN se están esforzando en enriquecer en servicios de valor añadido tanto en publicación como en distribución.
-Indaga qué servicios adicionales ofrecen los CDN en estos aspectos, te doy algunos ejemplos: subtitulado automático, identificación de cambios de plan, detección de caras, etc.
+                  Genera un clip de vídeo de calidad HD de unos 20 segundos de duración (o descárgalo de la web) que posea movimiento (algo equivalente al clip de fútbol que he usado de ejemplo).
+Sea cual sea su formato, conviértelo a MP4 con Avidemux con los siguientes valores y lo denominaremos clip01.
+La codificación de salida será MPEG4 AVC y a VIDEO OUTPUT-CONFIGURACIÓN selecciona como modo de codificación TASA DE BITS MEDIA-DOS PASADAS (para mantener la calidad) y 5000 Kbps.
+Como formato de audio, MP3 (lame) y como contenedor, MKV.
+Incluye estos clips en la entrega de la práctica. Confirma con MediaInfo que Avidemux ha realizado el trabajo correctamente.
                 </p>
             </div>
         </section>
 
           <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-fullhd-titulo">
-            <h2 id="video-fullhd-titulo" class="text-xl font-bold text-uoc-blue mb-4">Experimentando con el tag video.</h2>
-            <div class="prose max-w-none">
-                <p class="mb-2">
-                    AWS MediaConvert ofrece una serie de servicios adicionales o de "valor añadido" en el ámbito de la publicación y distribución de vídeo, más allá de la mera transcodificación básica. Estos servicios incluyen:
-                </p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li>Soporte para una amplia gama de formatos de entrada y salida, incluyendo H.264/AVC, H.265/HEVC, VP8, VP9 y AV1.</li>
-                    <li>Procesamiento Avanzado, como desentrelazado, reducción de ruido y escalado.</li>
-                    <li>Soporte HDR para estándares como HDR10, HDR10+, HLG y Dolby Vision.</li>
-                    <li>Packaging Adaptativo para formatos de streaming como HLS, DASH, CMAF y MSS.</li>
-                    <li>Protección de Contenido mediante la integración de sistemas DRM.</li>
-                    <li>Codificación Acelerada.</li>
-                </ul>
-                <p class="mb-2">
-                    Por su parte, AWS CloudFront se enfoca en la distribución eficiente del contenido procesado, ofreciendo:
-                </p>
-                <ul class="list-disc pl-5 mb-4">
-                    <li>Una Red Global de puntos de presencia.</li>
-                    <li>Escalabilidad Automática.</li>
-                    <li>Seguridad Robusta, incluyendo protección contra ataques DDoS y soporte para certificados SSL/TLS.</li>
-                    <li>Integración Fluida con otros servicios de AWS.</li>
-                    <li>Streaming Optimizado con baja latencia.</li>
-                </ul>
-                <p class="mb-2">
-                    La comparación menciona que MediaConvert ofrece más funcionalidades enfocadas en la codificación profesional que Azure Media Services, y que AWS cuenta con más características orientadas a la industria del broadcast profesional que Google Cloud Media Services.
-                </p>
-                <p>
-                    Es importante notar que, si bien los fuentes detallan estas funcionalidades avanzadas de procesamiento, packaging, seguridad y distribución, no mencionan servicios adicionales específicos como el subtitulado automático, la identificación de cambios de plano o la detección de caras en el contexto de los CDNs o servicios de transcodificación analizados.
-                </p>
-            </div>
+            <h2 id="video-fullhd-titulo" class="text-xl font-bold text-uoc-blue mb-4">Codificación y MKV</h2>
+            <p class="mb-2">
+El clip original puede descargarse aquí.
+
+La conversión del vídeo se realizó con Avidemux.
+
+La codificación se verificó con MediaInfo, confirmando que es correcta. El vídeo convertido está disponible para su descarga aquí.
+            </p>
         </section>
     </main>
 
