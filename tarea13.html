@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1.2 - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 1.2</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                    Publica el fichero .html y el vídeo en un servidor web gratuito o al CDN visto en la PEC1 (web estática) para verlo con una dirección http pública y valora la experiencia a nivel de usuario/a (retraso de visualización, calidad, etc.).
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="video-webm-titulo">
+            <h2 id="video-webm-titulo" class="text-xl font-bold text-uoc-blue mb-4">Publicación del fichero HTML</h2>
+            <p class="mb-4">
+            Se han creado dos versiones de la tarea 1.2: un fichero HTML sencillo llamado tarea12.html y la versión completa, ambos accesibles online en website completo y tarea1.2 respectivamente.
+            Para la publicación se empleó GitHub Pages de GitHub.
+            La reproducción del vídeo en formato MP4, códec H.264 y resolución Full HD se probó exitosamente en el navegador Chrome desde su dirección pública. La reproducción fue fluida y de buena calidad, sin observarse retrasos, parones ni cortes, lo que indica que el formato y la resolución son adecuados.
+        </section>
+
+    
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Tarea 1.3 - Práctica de Plataformas de publicación y distribución</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
