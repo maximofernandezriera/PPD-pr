@@ -1,0 +1,86 @@
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1.4 - Práctica de Plataformas de Máximo Fernández Riera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uoc-blue': '#000078',
+                        'uoc-light-blue': '#73EDFF',
+                        'uoc-orange': '#FF6600',
+                        'uoc-yellow': '#FFCD00',
+                        'uoc-purple': '#A23DD4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="logo_uoc.png" alt="Logo UOC - Universitat Oberta de Catalunya" class="h-24">
+                </div>
+                <div class="w-full md:w-3/4 text-uoc-blue">
+                    <h1 class="text-2xl font-bold mb-2">Práctica de la asignatura de Plataformas de publicación y distribución</h1>
+                    <p class="mb-1"><strong>Alumno:</strong> Máximo Fernández Riera</p>
+                    <p class="mb-1"><strong>Profesor/Consultor:</strong> Alexandre Ribelles García</p>
+                    <p>Máster Universitario en Ingeniería Informática, Semestre 2, Curso 2024-25</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="tarea-titulo">
+            <h2 id="tarea-titulo" class="text-2xl font-bold text-uoc-blue mb-4">Tarea 2.2</h2>
+            <div class="prose max-w-none">
+                <p class="mb-4">
+                  Configura una emisión repetitiva y una recepción del clip01 con los mismos valores empleados al clip de fútbol. En el VLC de emisión, menú HERRAMIENTAS-INFORMACIÓN DEL CÓDEC-CÓDEC (Mac: VENTANA-INFORMACIÓN MULTIMEDIA-DETALLES DEL CÓDEC), indica los códecs con los cuales dice que se generó el fichero almacenado. En ESTADÍSTICAS indica la TASA DE BITS DE CONTENIDO que está leyendo de disco, es la necesaria para una reproducción correcta del contenido (es un valor cambiante, de forma que toma un valor mediano aproximado).
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-lg shadow-md p-6 mb-8" aria-labelledby="info-video-titulo">
+            <h2 id="info-video-titulo" class="text-xl font-bold text-uoc-blue mb-4">Información del Vídeo</h2>
+            <p class="mb-4">
+                La reproducción del vídeo presenta un retraso inicial de 2 a 3 segundos. Una vez iniciado, el vídeo y el audio se mantienen fluidos y sincronizados en un equipo de gama media de 2022.
+            </p>
+            <div class="flex justify-center">
+                <img src="emision.png" alt="Información detallada del vídeo clip01.mkv" class="max-w-full h-auto rounded-md shadow-lg">
+            </div>
+              <p class="mb-4">
+            Siendo la captura de pantalla de la emisión la imagen anterior.
+        </section>
+    </main>
+
+    <footer class="bg-uoc-blue text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Máximo Fernández Riera - UOC</p>
+                </div>
+                <div>
+                    <p>Práctica de Plataformas de publicación y distribución</p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
